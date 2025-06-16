@@ -1,1 +1,90 @@
+ResuMatch (Coded in Java)
 
+ResuMatch is a resume-to-job description comparison tool built in Java that analyzes the textual similarity between a resume and a job post. It gives users a percentage-based match score and highlights key overlapping words. This project was created to practice practical applications of data structures and frequency maps, tokenization, and the concept of cosine similarity in Java.
+
+What It Does:
+
+- Takes both raw resume and job description text as input
+
+- Tokenizes the text into words and removes common stopwords that aren't useful in scanning
+
+- Calculates word frequency maps for each input
+
+- Converts text into numeric vectors (numeric values that a computer can understand)
+
+- Compares vectors using cosine similarity (here's the video I used to help me understand Cosine Similarity better: https://www.youtube.com/watch?v=e9U0QAFbfLI)
+
+- Outputs a match score and common keywords
+
+
+
+I wanted to create a project that:
+
+- Felt relevant to real job-seeking scenarios
+
+- Could demonstrate transferable skills for startups and larger companies
+
+- Let me apply data structure knowledge in a real context
+
+- Showcased problem-solving and self-directed learning
+
+
+During development, I had to:
+
+- Learn what tokenization means and how to break down raw text into useful chunks
+
+- Understand stop words and brainstorm how to filter out unimportant words
+
+- Study cosine similarity to compare frequency vectors (I learned the formula from YouTube and implemented it myself)
+
+
+Technologies:
+
+Java (no external libraries required)
+
+Standard Java collections (Map, Set, List, Scanner)
+
+Manual text processing, no machine learning / AI frameworks
+
+
+Sample Output:
+
+Enter your resume text:
+Software developer skilled in Python, APIs, and cloud computing.
+
+Enter the job description:
+Looking for a Python developer with experience in APIs, backend design, and cloud platforms.
+
+Match Score: 50.25%
+
+Top Matching Keywords:
+python
+cloud
+apis
+developer
+backend
+
+What I Learned:
+
+- Practical use of HashMap, Set, and arrays to structure text data
+
+- How to convert human-readable input into numeric vectors
+
+- How to measure document similarity with cosine similarity
+
+- How a very rudimentary and simple algorithm can simulate basic ATS-like filtering
+
+- How to build and test a project from scratch without relying on tutorials
+
+
+Future Ideas / Desired Further Implementation Ideas :
+
+- Parse resumes and job posts from files or PDFs
+
+- Highlight missing keywords from resumes without including any of the stop words
+
+- Add a web interface
+
+Disclaimer: This project is for personal and portfolio use only.
+
+Thank you for reading ^^
