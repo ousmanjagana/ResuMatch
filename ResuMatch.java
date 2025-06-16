@@ -3,15 +3,13 @@ public class ResuMatch {
 
     // Function of this method: Splits a string into lowercase words and removes punctuation
     public static List<String> tokenize(String text) {
-        // Replace all punctuation with empty strings, convert to lowercase, and split by whitespace
-        return Arrays.asList(text.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase().split("\\s+"));
+        // Replaces all punctuation with empty strings, convert to lowercase, and split by whitespace
+        return Arrays.asList(text.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase().split("\\s+")); //[^a-zA-Z0-9 ] looks for any symbol, punctuation, or special character that isn't a letter, number, or space
     }
 
     // Function of this method: Simple filter for common English stop words that add noise (like "the", "in", etc.)
     public static boolean isStopWord(String word) {
-        String[] stopwords = {
-            "the", "is", "at", "which", "on", "and", "a", "an", "with", "for", "in", "to", "of"
-        };
+        String[] stopwords = {"the", "is", "at", "which", "on", "and", "a", "an", "with", "for", "in", "to", "of"};
         return Arrays.asList(stopwords).contains(word);
     }
 
@@ -40,13 +38,16 @@ public class ResuMatch {
 
     // Function of this method: Measures similarity between two vectors using cosine similarity formula
     public static double cosineSimilarity(double[] v1, double[] v2) {
-        double dot = 0, normA = 0, normB = 0;
+        double dot = 0 
+        double normA = 0 
+        double normB = 0;
         for (int i = 0; i < v1.length; i++) {
             dot += v1[i] * v2[i];             // numerator: dot product
             normA += Math.pow(v1[i], 2);      // ||A||^2
             normB += Math.pow(v2[i], 2);      // ||B||^2
         }
         return (normA == 0 || normB == 0) ? 0 : dot / (Math.sqrt(normA) * Math.sqrt(normB));
+        //this calculates the magnitude (or the length of the vector) to compare content instead of just compare the size 
     }
 
     public static void main(String[] args) {
